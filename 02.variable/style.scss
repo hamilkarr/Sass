@@ -1,0 +1,27 @@
+$bgColor : red;
+$valid-sides: left, center, right;
+$font-size: ("myh1": 45px, "myh2": 19px, "myp": 16px);
+
+h1 {
+    $spanColor: red;
+    color: $bgColor;
+    font-size: map-get($font-size, "myh1");
+}
+
+p{
+    text-align: nth($valid-sides, 2);
+}
+
+@mixin center-xy {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.card{
+    @include center-xy;
+}
+
+.aside{
+    @include center-xy;
+}
